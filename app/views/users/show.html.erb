@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @user.name %>
+</h1>
+
+<p>BE SURE TO HIT REFRESH AFTER YOU UPLOADED SOMETHING, OTHERWISE YOU MAY SEE A CACHED PICTURE!</p>
+
+<p>
+  <strong>File upload:</strong>
+  <%= image_tag @user.file_upload, height: 100 %>
+</p>
+
+<p>
+  <strong>String upload:</strong>
+  <%= image_tag @user.string_upload, height: 100 %>
+</p>
+
+
+<% @user.attachments.each do |attachment| %>
+  <h2>Attachment #<%= attachment.id %></h2>
+  <p>
+    <strong>File upload:</strong>
+    <%= image_tag attachment.file_upload, height: 100 %>
+  </p>
+
+  <p>
+    <strong>String upload:</strong>
+    <%= image_tag attachment.string_upload, height: 100 %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
