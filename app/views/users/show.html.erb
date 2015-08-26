@@ -18,7 +18,7 @@
 
 
 <% @user.attachments.each do |attachment| %>
-  <h2>Attachment #<%= attachment.id %></h2>
+  <h2>Attachment <%= attachment.name %></h2>
   <p>
     <strong>File upload:</strong>
     <%= image_tag attachment.file_upload, height: 100 %>

@@ -3226,3 +3226,2026 @@ Processing by UsersController#show as HTML
   [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 3]]
   Rendered users/show.html.erb within layouts/application (3.7ms)
 Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-21 14:55:04 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (6.4ms)
+  Rendered users/_form.html.erb (19.7ms)
+  Rendered users/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 74ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-21 15:03:39 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (7.0ms)
+  Rendered users/_form.html.erb (18.8ms)
+  Rendered users/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-21 15:03:39 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-21 15:03:39 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-21 15:03:39 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-21 15:03:39 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-21 15:03:39 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-21 15:03:39 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-21 15:03:40 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-21 15:03:40 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-21 15:03:40 +0200
+
+
+Started GET "/" for ::1 at 2015-08-25 15:43:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 26ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-08-25 15:43:29 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 231ms (Views: 220.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-25 15:43:38 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (7.5ms)
+  Rendered users/_form.html.erb (94.9ms)
+  Rendered users/new.html.erb within layouts/application (98.8ms)
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-25 15:46:49 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rNfTQxVdJ0TIwpWada3DJZRax2E0UgHMK1C03BiGz8/h/Dpt/GbZKmpI+GUhWRBl4lmrKCDCdcEdFOOlIe1uWA==", "user"=>{"name"=>"test", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000104b09118 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150825-18310-1xq0fs4.jpg>, @original_filename="kanton-bern.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[file_upload]\"; filename=\"kanton-bern.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "users" ("name", "file_upload", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "test"], ["file_upload", "kanton-bern.jpg"], ["string_upload", "file.png"], ["created_at", "2015-08-25 13:47:34.274598"], ["updated_at", "2015-08-25 13:47:34.274598"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 45019ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:47:34 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 55ms (Views: 43.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 15:47:38 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (9.2ms)
+  Rendered users/_form.html.erb (24.2ms)
+  Rendered users/edit.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/4" for ::1 at 2015-08-25 15:47:50 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uY6HRt9gn2GpmBP5YXd/tzrfmXIR8UDVfHJ0fzWzy6TzdMz8kZ8EyQsDbCxcQ6+qugSLNzXsQ5jtZ6oxb1uuQ==", "user"=>{"name"=>"test", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000101e53010 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150825-18310-16opdr9.jpg>, @original_filename="kanton-zug.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[file_upload]\"; filename=\"kanton-zug.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC"}, "commit"=>"Update User", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "file_upload" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["file_upload", "kanton-zug.jpg"], ["updated_at", "2015-08-25 13:49:21.687751"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 90986ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:49:21 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 15:49:29 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (6.6ms)
+  Rendered users/_form.html.erb (18.6ms)
+  Rendered users/edit.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/4" for ::1 at 2015-08-25 15:49:33 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtgbywmqwPHFbSdmR85ZnVqQC4VdvV0pIPCzTo4rSuOL8/Ll4JE+n2fnSpkTOordLJNnzEktKSQWtOQ3t0DrdA==", "user"=>{"name"=>"test", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 4760ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:49:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:49:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-25 15:49:43 +0200
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:49:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-25 15:49:44 +0200
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:49:45 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-25 15:49:45 +0200
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 15:49:47 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (7.3ms)
+  Rendered users/_form.html.erb (19.3ms)
+  Rendered users/edit.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:49:58 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 51ms (Views: 40.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-25 15:49:58 +0200
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 15:50:00 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (8.9ms)
+  Rendered users/_form.html.erb (30.2ms)
+  Rendered users/edit.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/4" for ::1 at 2015-08-25 15:50:03 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zIIoj5t2BtyYOkTOanngoy9bcpNRiEgX5EMKp495jw+BqcGhck34sjqwKTE+jTPjWVge2kUYPBrSB13ethIumA==", "user"=>{"name"=>"test", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC"}, "commit"=>"Update User", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 364ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:50:04 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 15:50:05 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-25 15:50:05 +0200
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 15:51:37 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (8.8ms)
+  Rendered users/_form.html.erb (20.5ms)
+  Rendered users/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-08-25 15:52:15 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-25 15:52:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-25 15:52:21 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.2ms)
+  Rendered users/_form.html.erb (17.8ms)
+  Rendered users/edit.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-25 15:52:24 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7UG5QliH4oI8kV6CRXV0ilxJRnTsCRHdmANQgrfGGnagalBssbwc7J4bM30RgafKKkoqPfiZZdCuRwf7jq274Q==", "user"=>{"name"=>"Josh", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "string_upload" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["string_upload", "file.png"], ["updated_at", "2015-08-25 13:52:24.963372"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 312ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-25 15:52:24 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-25 15:52:27 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (7.5ms)
+  Rendered users/_form.html.erb (20.0ms)
+  Rendered users/edit.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-25 15:52:32 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zkrxINv3SVRv+8YXEbX8UowglbVLg1ujrJR/Fe54W/WDYRgOMsy3Os1xq+hFQS8S+iP5/F8TL66a0Chs1xP6Yg==", "user"=>{"name"=>"Josh", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 356ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-25 15:52:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-08-25 16:04:54 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-25 16:04:56 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (6.6ms)
+  Rendered users/_form.html.erb (18.4ms)
+  Rendered users/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-08-25 16:05:01 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 16:05:05 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (6.8ms)
+  Rendered users/_form.html.erb (17.9ms)
+  Rendered users/edit.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/4" for ::1 at 2015-08-25 16:05:17 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5EKYCsNMtYLkPF29IommLdddDcrAK7glQqbcD24nGNepaXEkKndL7Ea2MEJ2fXVtoV5hg9S7zCh04ot2V0y5QA==", "user"=>{"name"=>"test", "string_upload"=>"file.png", "attachments_attributes"=>{"1440511507204"=>{"string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 4], ["string_upload", "file.png"], ["created_at", "2015-08-25 14:05:17.442397"], ["updated_at", "2015-08-25 14:05:17.442397"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 366ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 16:05:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 16:05:19 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (7.3ms)
+  Rendered users/_attachment_fields.html.erb (9.5ms)
+  Rendered users/_form.html.erb (31.8ms)
+  Rendered users/edit.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/4" for ::1 at 2015-08-25 16:05:22 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FRLJAzUO1+6FGJCYgUF4l1h209tpqRztYs/zS+z/EjxYOSAt3DUpgCeS/WfVtavXLnW/kn05aOBUi6Qy1ZSzqw==", "user"=>{"name"=>"test", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"2"}}}, "commit"=>"Update User", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.7ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 2  [["user_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 357ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 16:05:23 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 16:06:13 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (6.6ms)
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_form.html.erb (25.3ms)
+  Rendered users/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/4" for ::1 at 2015-08-25 16:06:22 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"roINlZzK15oPipvo+d7GCogXZTUzAqDh3wcb0BCkIOTjqeS7dfEp9K0A9hetKhVK/hQJfCeS1OzpQ0ypKc+Bcw==", "user"=>{"name"=>"test", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"string_upload"=>"file.png", "_destroy"=>"false", "id"=>"2"}, "1440511575772"=>{"string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 2  [["user_id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["string_upload", "file.png"], ["created_at", "2015-08-25 14:06:22.779941"], ["updated_at", "2015-08-25 14:06:22.779941"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 303ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 16:06:22 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 16:06:24 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (8.3ms)
+  Rendered users/_attachment_fields.html.erb (20.5ms)
+  Rendered users/_attachment_fields.html.erb (9.2ms)
+  Rendered users/_form.html.erb (51.8ms)
+  Rendered users/edit.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/4" for ::1 at 2015-08-25 16:06:28 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GJXHW9mTjGWu+oL4MWni5og9+kL43bCl20CjcviNNvJVvi51MKhyCwxw7wdlnTGm/j6WC+xNxKjtBPQLweaXZQ==", "user"=>{"name"=>"test", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"string_upload"=>"file.png", "_destroy"=>"false", "id"=>"2"}, "1"=>{"string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"3"}}}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.8ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (2, 3)[0m  [["user_id", 4]]
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 354ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 16:06:28 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 16:09:18 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (7.2ms)
+  Rendered users/_attachment_fields.html.erb (7.4ms)
+  Rendered users/_attachment_fields.html.erb (7.5ms)
+  Rendered users/_form.html.erb (41.5ms)
+  Rendered users/edit.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2015-08-25 16:59:53 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 214ms (Views: 184.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-25 16:59:54 +0200
+
+
+Started GET "/users/4/edit" for ::1 at 2015-08-25 16:59:56 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/_attachment_fields.html.erb (6.7ms)
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_attachment_fields.html.erb (8.0ms)
+  Rendered users/_form.html.erb (69.5ms)
+  Rendered users/edit.html.erb within layouts/application (72.5ms)
+Completed 200 OK in 108ms (Views: 106.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-08-25 16:59:58 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-25 17:00:00 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (9.3ms)
+  Rendered users/_form.html.erb (23.8ms)
+  Rendered users/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-25 17:00:01 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uBDIX7+goztjq5OmRLyd9GTozPv/5ek3opyQvXHrk1j1OyFxVptdVcEh/lkQSE60Euugsut1nTqU2MfESIAyzw==", "user"=>{"name"=>"", "string_upload"=>""}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", ""], ["created_at", "2015-08-25 15:00:01.362551"], ["updated_at", "2015-08-25 15:00:01.362551"]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 12ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-25 17:00:01 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 89ms (Views: 85.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-25 17:00:01 +0200
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 02:01:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:37:20 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 225ms (Views: 188.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:37:20 +0200
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:37:22 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:37:23 +0200
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:37:23 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:37:24 +0200
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:37:25 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (7.7ms)
+  Rendered users/_form.html.erb (73.2ms)
+  Rendered users/edit.html.erb within layouts/application (77.2ms)
+Completed 200 OK in 106ms (Views: 104.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:37:34 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uiZPgvukk+ZlyCsl6xIKyXD+gMJk42T0Qau34S/lWuf3DaasEp9tiMdCRtq/5tmJBv3si3BzEPl37+CYFo77cA==", "user"=>{"name"=>"asdf", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "name" = ?, "string_upload" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "asdf"], ["string_upload", "file.png"], ["updated_at", "2015-08-26 07:37:35.079194"], ["id", 5]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 309ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:37:35 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:37:36 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (6.3ms)
+  Rendered users/_form.html.erb (17.0ms)
+  Rendered users/edit.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:37:40 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J56xCK4s/IjQAfGeb7uYQ5rXOf91hKkqobMKSmsyyVdqtVgmRxcC5nKLnGE7T0sD7NRVtmEU3SeX910zUllowA==", "user"=>{"name"=>"asdf", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC"}, "commit"=>"Update User", "id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 361ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:37:41 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:37:42 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (5.6ms)
+  Rendered users/_form.html.erb (15.8ms)
+  Rendered users/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:37:54 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2253WodggdsWOfyTDvwuMeK4E1CGGYDf3ryJ5Sv+2sOWRZ50blt/tbSzkWxaCP1xlLt/GZKJ9NLo+N6cEpV7VA==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"1440574664717"=>{"string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 5], ["string_upload", "file.png"], ["created_at", "2015-08-26 07:37:54.766049"], ["updated_at", "2015-08-26 07:37:54.766049"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 363ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:37:54 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:37:56 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (6.4ms)
+  Rendered users/_attachment_fields.html.erb (5.6ms)
+  Rendered users/_form.html.erb (28.1ms)
+  Rendered users/edit.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:38:00 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2VCXq5eYcd5PNMOReUA0TinjjTeEu6+fItns+XiZkMCUe36FfqOPsO2+rm4ttOcOX+DhfpAr25IUnbuAQfIxVw==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"4"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 4  [["user_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 299ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:38:00 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:38:02 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_attachment_fields.html.erb (5.9ms)
+  Rendered users/_form.html.erb (24.3ms)
+  Rendered users/edit.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:38:12 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ECLeeRSMFIhvB+10ulBK6xVHAlg69wai3BMSFjFO6BVdCTdX/bfq5s2NgIvupJmrY0RuES5ncq/qV0VvCCVJgg==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"file_upload"=>#<ActionDispatch::Http::UploadedFile:0x000001018a8368 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150826-4405-lwnckv.jpg>, @original_filename="credit-suisse.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachments_attributes][0][file_upload]\"; filename=\"credit-suisse.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"4"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 4  [["user_id", 5]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attachments" SET "file_upload" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["file_upload", "credit-suisse.jpg"], ["updated_at", "2015-08-26 07:38:12.741679"], ["id", 4]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 557ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:38:12 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:38:29 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (6.6ms)
+  Rendered users/_attachment_fields.html.erb (7.5ms)
+  Rendered users/_form.html.erb (26.4ms)
+  Rendered users/edit.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:38:33 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1fgvaMmb8oUb66zY/JkzupcliKRzrIFv/JfmSPyM58OY08ZGIKAM67lhwSeobeD64Sbk7Wc89WLK07ExxedGVA==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"4"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 4  [["user_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 379ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:38:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:38:35 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (8.6ms)
+  Rendered users/_attachment_fields.html.erb (6.0ms)
+  Rendered users/_form.html.erb (29.5ms)
+  Rendered users/edit.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:38:42 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M3EBr8adIHNoNRCvija6SIeGG+BHuvlAVQ6JKdYUcId+WuiBL6beHcq/fVDewmkI8YV3qVMqjU1jSt5Q73/REA==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000104f416e0 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150826-4405-fc7c4o.jpg>, @original_filename="kanton-bern.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachments_attributes][0][file_upload]\"; filename=\"kanton-bern.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"4"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 4  [["user_id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attachments" SET "file_upload" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["file_upload", "kanton-bern.jpg"], ["updated_at", "2015-08-26 07:38:43.499202"], ["id", 4]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 593ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:38:43 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:44:50 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (6.8ms)
+  Rendered users/_attachment_fields.html.erb (5.9ms)
+  Rendered users/_form.html.erb (24.0ms)
+  Rendered users/edit.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToAttachment (20150826074932)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "attachments" ADD "name" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150826074932"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:50:59 +0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (9.8ms)
+  Rendered users/_attachment_fields.html.erb (11.4ms)
+  Rendered users/_form.html.erb (42.5ms)
+  Rendered users/edit.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 84ms (Views: 73.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:50:59 +0200
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:51:04 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xWr55K4o/VZ/q9pIDxUjzWgTLrOIRGZ8VHnv3T2uo9mIQRDKRxMDON0ht7db4fCNHhBC+pzUEnFiPbikBMUCTg==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"hallo", "string_upload"=>"file.png", "_destroy"=>"false", "id"=>"4"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 4[0m  [["user_id", 5]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["name", "hallo"], ["updated_at", "2015-08-26 07:51:04.878905"], ["id", 4]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 12ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:51:04 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:51:05 +0200
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:51:10 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (11.0ms)
+  Rendered users/_attachment_fields.html.erb (9.9ms)
+  Rendered users/_form.html.erb (33.2ms)
+  Rendered users/edit.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:51:17 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dB8IE0Ov1D1vdheD4tCfzIkMFQBVhyrEgjbPFS3Z2Xo5NOE9qpQqU838eny2JEyM/w95SUEXXsm0cphsFLJ47Q==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"hallo", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"4"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 4  [["user_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 306ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:51:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:51:17 +0200
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:51:18 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (9.8ms)
+  Rendered users/_attachment_fields.html.erb (10.8ms)
+  Rendered users/_form.html.erb (33.7ms)
+  Rendered users/edit.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for ::1 at 2015-08-26 09:51:24 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9TPd3jjfwpwqEYIj9kweXP/DptruiFms7g0E2Hsw8sK4GDTw0eQ88oib79yiuM0cicDKk/oYLaHYSVOhQltTVQ==", "user"=>{"name"=>"asdf", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"hallo2", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"4"}}}, "commit"=>"Update User", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 4  [["user_id", 5]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", "hallo2"], ["updated_at", "2015-08-26 07:51:24.322496"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 303ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/5" for ::1 at 2015-08-26 09:51:24 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:51:24 +0200
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:57:19 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (9.6ms)
+  Rendered users/_attachment_fields.html.erb (8.6ms)
+  Rendered users/_form.html.erb (30.5ms)
+  Rendered users/edit.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-08-26 09:57:36 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-26 09:57:37 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (15.1ms)
+  Rendered users/_form.html.erb (32.6ms)
+  Rendered users/new.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 78ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-26 09:57:46 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.4ms)
+  Rendered users/new.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `attachments_path' for #<#<Class:0x00000104173018>:0x00000104169e78>):
+    1: <p>TRY TO CHANGE THE UPLOADS!</p>
+    2: 
+    3: <%= simple_form_for(@user) do |f| %>
+    4:   <%= f.error_notification %>
+    5: 
+    6:   <fieldset>
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3357334599612362999_2182090760'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__4308268375413058901_2181766880'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.7ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-26 09:57:54 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (9.8ms)
+  Rendered users/_attachment_fields.html.erb (10.2ms)
+  Rendered users/_form.html.erb (31.4ms)
+  Rendered users/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 81ms (Views: 61.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:57:54 +0200
+
+
+Started GET "/users/new" for ::1 at 2015-08-26 09:57:56 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (11.5ms)
+  Rendered users/_attachment_fields.html.erb (10.5ms)
+  Rendered users/_form.html.erb (32.2ms)
+  Rendered users/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 09:57:56 +0200
+
+
+Started GET "/users" for ::1 at 2015-08-26 09:57:59 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2015-08-26 09:58:01 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 3]]
+  Rendered users/_attachment_fields.html.erb (9.8ms)
+  Rendered users/_attachment_fields.html.erb (8.6ms)
+  Rendered users/_form.html.erb (34.5ms)
+  Rendered users/edit.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-26 09:59:40 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (8.4ms)
+  Rendered users/_form.html.erb (25.1ms)
+  Rendered users/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 61ms (Views: 52.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 09:59:42 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (12.1ms)
+  Rendered users/_attachment_fields.html.erb (8.0ms)
+  Rendered users/_attachment_fields.html.erb (10.3ms)
+  Rendered users/_form.html.erb (48.8ms)
+  Rendered users/edit.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 78ms (Views: 74.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2015-08-26 10:03:53 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 5]]
+  Rendered users/_attachment_fields.html.erb (9.1ms)
+  Rendered users/_attachment_fields.html.erb (8.0ms)
+  Rendered users/_attachment_fields.html.erb (9.1ms)
+  Rendered users/_form.html.erb (38.6ms)
+  Rendered users/edit.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:03:53 +0200
+
+
+Started GET "/users" for ::1 at 2015-08-26 10:03:57 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:03:58 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:04:01 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.0ms)
+  Rendered users/_attachment_fields.html.erb (9.7ms)
+  Rendered users/_form.html.erb (30.7ms)
+  Rendered users/edit.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:04:08 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (8.7ms)
+  Rendered users/_attachment_fields.html.erb (8.1ms)
+  Rendered users/_form.html.erb (27.4ms)
+  Rendered users/edit.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:04:16 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMhIwYhmOtrav7Iy/Yb0S984hCelVKVSWnE6CKsexKEN46HvYV3EtHg1382pcicLqTvobrHE0V9sNW1xknVlNg==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "attachments" ("name", "user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "josh"], ["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:04:16.471068"], ["updated_at", "2015-08-26 08:04:16.471068"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 309ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:04:16 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:04:16 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:04:18 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.0ms)
+  Rendered users/_attachment_fields.html.erb (9.5ms)
+  Rendered users/_attachment_fields.html.erb (11.1ms)
+  Rendered users/_form.html.erb (43.1ms)
+  Rendered users/edit.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:04:21 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BtHa+0uDt6qaxyR8isyH7HMSZ4vkMVSBaBk1mMaJjSRMK5FBBXwsAjhcW6m3+Ffx88l1zsAsV8z5DOvWnGHow==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh2", "string_upload"=>"file.png", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.5ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 5  [["user_id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", "josh2"], ["updated_at", "2015-08-26 08:04:21.206536"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:04:21 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:04:21 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:04:23 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.5ms)
+  Rendered users/_attachment_fields.html.erb (10.1ms)
+  Rendered users/_attachment_fields.html.erb (10.1ms)
+  Rendered users/_form.html.erb (44.2ms)
+  Rendered users/edit.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:04:27 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fwQoB4UkAACflA/saONKp+RlrFnd4mDmauId5vDequ8yL8EpbB/+bj0eYhM8F5nnkmbAEMlyFOtcpkqfybULeA==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh2", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 5[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 349ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:04:27 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:04:27 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:04:29 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (11.8ms)
+  Rendered users/_attachment_fields.html.erb (13.5ms)
+  Rendered users/_attachment_fields.html.erb (11.6ms)
+  Rendered users/_form.html.erb (49.8ms)
+  Rendered users/edit.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:04:36 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yKiOFksOrRR56ml0/WcaJrki89eMpEt0K4qx8zfE9PyFg2c4ojVTettgBIupk8lmzyGfnpg0P3kdzuaKDq9Vaw==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 5[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["name", "josh"], ["updated_at", "2015-08-26 08:04:36.920586"], ["id", 5]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 357ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:04:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:04:37 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:04:57 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.5ms)
+  Rendered users/_attachment_fields.html.erb (9.0ms)
+  Rendered users/_attachment_fields.html.erb (9.8ms)
+  Rendered users/_form.html.erb (43.1ms)
+  Rendered users/edit.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 99ms (Views: 80.5ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:05:07 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"frCuedgDMDC3GaYd1r0LMOO7w8I0GHBnoAFOV19xAf8zm0dXMTjOXhWTy+KCSdhwlbiviyCIBGqWRRkuZhqgaA==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 31500ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:05:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:05:38 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:05:41 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (9.2ms)
+  Rendered users/_attachment_fields.html.erb (8.4ms)
+  Rendered users/_attachment_fields.html.erb (10.8ms)
+  Rendered users/_form.html.erb (41.1ms)
+  Rendered users/edit.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:05:51 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"34E5SETZ7v5GhV/7c1imKGAJAWWXd7BV+HbBaJHTURiSqtBmreIQkOQPMgQnrHVoFgptLIPnxFjOMpYRqLjwjw==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh2", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 5  [["user_id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", "josh2"], ["updated_at", "2015-08-26 08:06:05.523707"], ["id", 5]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 14434ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:06:05 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:06:05 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:06:07 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.7ms)
+  Rendered users/_attachment_fields.html.erb (11.4ms)
+  Rendered users/_attachment_fields.html.erb (9.6ms)
+  Rendered users/_form.html.erb (46.6ms)
+  Rendered users/edit.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 81ms (Views: 77.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:06:14 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ljyeygRRZ5o5UPErgws/xQk91qAcZuwSty+a/e8rbOrbF3fk7WqZ9JvanNTX/+yFfz666Qj2mB+Ba82E1kDNfQ==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["name", "josh"], ["updated_at", "2015-08-26 08:06:56.596767"], ["id", 5]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 42170ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:06:56 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:06:56 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:06:56 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:06:56 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:06:56 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:06:56 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:06:56 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:06:56 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:06:57 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:06:57 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:06:59 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (11.6ms)
+  Rendered users/_attachment_fields.html.erb (14.9ms)
+  Rendered users/_attachment_fields.html.erb (10.5ms)
+  Rendered users/_form.html.erb (51.9ms)
+  Rendered users/edit.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 95ms (Views: 92.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:07:02 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W6WNEoogBsM2I/5YE5RUHLFdSrswzC3m6r3XR5P5yVoWjmQ8Yxv4rZSpk6dHYIdcx14m8iRcWevc+YA+qpJozQ==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh2", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 5[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["name", "josh2"], ["updated_at", "2015-08-26 08:07:09.723697"], ["id", 5]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 6945ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:07:09 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/scaffolds.self-8d01cced04d7eadd83431622891a7dfb1f034c902b41836d0cf54c736037eec1.css?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:07:09 +0200

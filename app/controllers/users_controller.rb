@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user.attachments.build
   end
 
   # POST /users
@@ -69,6 +70,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :file_upload, :string_upload, attachments_attributes: [:id, :file_upload, :string_upload, :_destroy])
+      params.require(:user).permit(:name, :file_upload, :string_upload, attachments_attributes: [:id, :name, :file_upload, :string_upload, :_destroy])
     end
 end
