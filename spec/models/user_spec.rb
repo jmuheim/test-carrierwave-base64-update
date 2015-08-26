@@ -6,16 +6,14 @@ RSpec.describe User, type: :model do
 
   it "creates a file from a base64 string" do
     expect {
-      User.create! name:          'test',
-                   string_upload: base64_1
+      User.create! string_upload: base64_1
     }.to change { User.count }.by 1
 
     expect(file_to_base64(User.last.string_upload.file.file)).to eq base64_1
   end
 
   it "updates a file from a base64 string" do
-    user = User.create! name:          'test',
-                        string_upload: base64_1
+    user = User.create! string_upload: base64_1
 
     user.update_attributes! string_upload: base64_2
 
@@ -24,8 +22,7 @@ RSpec.describe User, type: :model do
 
   describe 'nested attachments' do
     it "creates a file from a base64 string" do
-      user = User.create! name:          'test',
-                          string_upload: base64_1
+      user = User.create! string_upload: base64_1
 
       expect {
         user.update_attributes! attachments_attributes: [{string_upload: base64_1}]
@@ -36,9 +33,7 @@ RSpec.describe User, type: :model do
     end
 
     it "updates a file from a base64 string" do
-      user = User.create! name:          'test',
-                          string_upload: base64_1,
-                          attachments_attributes: [{string_upload: base64_1}]
+      user = User.create! attachments_attributes: [{string_upload: base64_1}]
 
       user.update_attributes! attachments_attributes: [{string_upload: base64_2}]
 

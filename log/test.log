@@ -2112,3 +2112,736 @@ Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
   [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/new" for 127.0.0.1 at 2015-08-26 10:13:05 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_form.html.erb (57.9ms)
+  Rendered users/new.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 998ms (Views: 981.1ms | ActiveRecord: 0.4ms)
+Started POST "/users" for 127.0.0.1 at 2015-08-26 10:13:06 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"test", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:06.779395"], ["updated_at", "2015-08-26 08:13:06.779395"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 324ms (ActiveRecord: 0.7ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:13:06 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:07.106602"], ["updated_at", "2015-08-26 08:13:07.106602"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:13:07 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.2ms)
+  Rendered users/_attachment_fields.html.erb (6.0ms)
+  Rendered users/_form.html.erb (20.1ms)
+  Rendered users/edit.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:13:07 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"test", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 359ms (ActiveRecord: 0.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:13:07 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:07.799392"], ["updated_at", "2015-08-26 08:13:07.799392"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:13:07 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (5.6ms)
+  Rendered users/_attachment_fields.html.erb (5.8ms)
+  Rendered users/_form.html.erb (18.9ms)
+  Rendered users/edit.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:13:07 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"test", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "attachments" ("name", "user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:08.128908"], ["updated_at", "2015-08-26 08:13:08.128908"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 317ms (ActiveRecord: 1.5ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:13:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:08.759746"], ["updated_at", "2015-08-26 08:13:08.759746"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:08.761263"], ["updated_at", "2015-08-26 08:13:08.761263"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:13:08 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (5.6ms)
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_form.html.erb (24.9ms)
+  Rendered users/edit.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:13:08 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"test", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"1"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:13:09.152902"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 352ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:13:09 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:09.457159"], ["updated_at", "2015-08-26 08:13:09.457159"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:09.743642"], ["updated_at", "2015-08-26 08:13:09.743642"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:10.374723"], ["updated_at", "2015-08-26 08:13:10.374723"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:10.664625"], ["updated_at", "2015-08-26 08:13:10.664625"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:11.242253"], ["updated_at", "2015-08-26 08:13:11.242253"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:11.243859"], ["updated_at", "2015-08-26 08:13:11.243859"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:11.613885"], ["updated_at", "2015-08-26 08:13:11.613885"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:22.781508"], ["updated_at", "2015-08-26 08:13:22.781508"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:22.783211"], ["updated_at", "2015-08-26 08:13:22.783211"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:13:22 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (7.3ms)
+  Rendered users/_attachment_fields.html.erb (6.0ms)
+  Rendered users/_attachment_fields.html.erb (5.8ms)
+  Rendered users/_form.html.erb (59.4ms)
+  Rendered users/edit.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 232ms (Views: 208.7ms | ActiveRecord: 0.2ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:13:23 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"test", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"1"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  UPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:13:23.396045"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 359ms (ActiveRecord: 1.3ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:13:23 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-08-26 08:13:40.336833"], ["updated_at", "2015-08-26 08:13:40.336833"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:40.338613"], ["updated_at", "2015-08-26 08:13:40.338613"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:13:40 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.8ms)
+  Rendered users/_attachment_fields.html.erb (6.9ms)
+  Rendered users/_attachment_fields.html.erb (8.3ms)
+  Rendered users/_form.html.erb (62.6ms)
+  Rendered users/edit.html.erb within layouts/application (65.9ms)
+Completed 200 OK in 238ms (Views: 217.7ms | ActiveRecord: 0.2ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:13:40 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"1"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:13:40.940066"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", ""], ["updated_at", "2015-08-26 08:13:40.943448"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 347ms (ActiveRecord: 1.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:13:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-08-26 08:13:49.357288"], ["updated_at", "2015-08-26 08:13:49.357288"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:13:49.359229"], ["updated_at", "2015-08-26 08:13:49.359229"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:13:49 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (8.1ms)
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_attachment_fields.html.erb (5.6ms)
+  Rendered users/_form.html.erb (61.3ms)
+  Rendered users/edit.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 243ms (Views: 223.0ms | ActiveRecord: 0.3ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:13:49 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"file.png", "_destroy"=>"false", "id"=>"1"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:13:49.633327"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", ""], ["updated_at", "2015-08-26 08:13:49.635969"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:13:49 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/new" for 127.0.0.1 at 2015-08-26 10:14:17 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (7.1ms)
+  Rendered users/_form.html.erb (72.1ms)
+  Rendered users/new.html.erb within layouts/application (76.3ms)
+Completed 200 OK in 246ms (Views: 223.0ms | ActiveRecord: 0.4ms)
+Started POST "/users" for 127.0.0.1 at 2015-08-26 10:14:17 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", ""], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:18.182437"], ["updated_at", "2015-08-26 08:14:18.182437"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 360ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:18.497027"], ["updated_at", "2015-08-26 08:14:18.497027"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:14:18 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.5ms)
+  Rendered users/_attachment_fields.html.erb (6.4ms)
+  Rendered users/_form.html.erb (22.2ms)
+  Rendered users/edit.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:14:18 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:14:18.868652"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 340ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:19.173132"], ["updated_at", "2015-08-26 08:14:19.173132"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:14:19 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_form.html.erb (19.9ms)
+  Rendered users/edit.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:14:19 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:14:19.500077"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("name", "user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:19.502521"], ["updated_at", "2015-08-26 08:14:19.502521"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 298ms (ActiveRecord: 0.5ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:19 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-08-26 08:14:19.822777"], ["updated_at", "2015-08-26 08:14:19.822777"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:19.824657"], ["updated_at", "2015-08-26 08:14:19.824657"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:14:19 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.0ms)
+  Rendered users/_attachment_fields.html.erb (6.8ms)
+  Rendered users/_attachment_fields.html.erb (7.0ms)
+  Rendered users/_form.html.erb (29.4ms)
+  Rendered users/edit.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:14:19 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"1"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:14:20.223448"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", ""], ["updated_at", "2015-08-26 08:14:20.226024"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 360ms (ActiveRecord: 0.7ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:20 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/new" for 127.0.0.1 at 2015-08-26 10:14:40 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (6.5ms)
+  Rendered users/_form.html.erb (57.9ms)
+  Rendered users/new.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 183ms (Views: 163.0ms | ActiveRecord: 0.4ms)
+Started POST "/users" for 127.0.0.1 at 2015-08-26 10:14:40 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", ""], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:40.944968"], ["updated_at", "2015-08-26 08:14:40.944968"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 296ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:41.251242"], ["updated_at", "2015-08-26 08:14:41.251242"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:14:41 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.2ms)
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_form.html.erb (21.5ms)
+  Rendered users/edit.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:14:41 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:14:41.627128"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 345ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:41 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:41.939134"], ["updated_at", "2015-08-26 08:14:41.939134"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:14:41 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (5.6ms)
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_form.html.erb (18.5ms)
+  Rendered users/edit.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:14:41 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:14:42.265444"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("name", "user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:42.267927"], ["updated_at", "2015-08-26 08:14:42.267927"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 299ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-08-26 08:14:42.586612"], ["updated_at", "2015-08-26 08:14:42.586612"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:42.588282"], ["updated_at", "2015-08-26 08:14:42.588282"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:14:42 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (5.9ms)
+  Rendered users/_attachment_fields.html.erb (5.1ms)
+  Rendered users/_attachment_fields.html.erb (6.5ms)
+  Rendered users/_form.html.erb (57.4ms)
+  Rendered users/edit.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:14:42 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"1"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:14:43.010420"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", ""], ["updated_at", "2015-08-26 08:14:43.012342"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 357ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:14:43 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:43.311850"], ["updated_at", "2015-08-26 08:14:43.311850"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:43.605173"], ["updated_at", "2015-08-26 08:14:43.605173"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:44.242901"], ["updated_at", "2015-08-26 08:14:44.242901"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:44.531987"], ["updated_at", "2015-08-26 08:14:44.531987"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-26 08:14:44.819338"], ["updated_at", "2015-08-26 08:14:44.819338"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:44.821444"], ["updated_at", "2015-08-26 08:14:44.821444"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:14:45.175313"], ["updated_at", "2015-08-26 08:14:45.175313"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/new" for 127.0.0.1 at 2015-08-26 10:15:16 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (7.2ms)
+  Rendered users/_form.html.erb (58.8ms)
+  Rendered users/new.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 177ms (Views: 159.5ms | ActiveRecord: 0.3ms)
+Started POST "/users" for 127.0.0.1 at 2015-08-26 10:15:16 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII="}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", ""], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:16.795483"], ["updated_at", "2015-08-26 08:15:16.795483"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 295ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:15:16 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:17.106462"], ["updated_at", "2015-08-26 08:15:17.106462"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:15:17 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (7.5ms)
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_form.html.erb (22.7ms)
+  Rendered users/edit.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:15:17 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:15:17.477996"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 339ms (ActiveRecord: 1.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:15:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:17.785098"], ["updated_at", "2015-08-26 08:15:17.785098"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:15:17 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.0ms)
+  Rendered users/_attachment_fields.html.erb (6.6ms)
+  Rendered users/_form.html.erb (20.2ms)
+  Rendered users/edit.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:15:17 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:15:18.103975"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("name", "user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:18.105872"], ["updated_at", "2015-08-26 08:15:18.105872"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 288ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:15:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-08-26 08:15:18.403727"], ["updated_at", "2015-08-26 08:15:18.403727"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:18.405437"], ["updated_at", "2015-08-26 08:15:18.405437"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-26 10:15:18 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (5.4ms)
+  Rendered users/_attachment_fields.html.erb (4.9ms)
+  Rendered users/_attachment_fields.html.erb (6.7ms)
+  Rendered users/_form.html.erb (55.7ms)
+  Rendered users/edit.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.1ms)
+Started PATCH "/users/1" for 127.0.0.1 at 2015-08-26 10:15:18 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"1"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", ""], ["updated_at", "2015-08-26 08:15:18.825157"], ["id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", ""], ["updated_at", "2015-08-26 08:15:18.827542"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 356ms (ActiveRecord: 0.7ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-26 10:15:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.0ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:19.134350"], ["updated_at", "2015-08-26 08:15:19.134350"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:19.417342"], ["updated_at", "2015-08-26 08:15:19.417342"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("string_upload", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:20.047979"], ["updated_at", "2015-08-26 08:15:20.047979"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:20.346307"], ["updated_at", "2015-08-26 08:15:20.346307"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-26 08:15:20.633137"], ["updated_at", "2015-08-26 08:15:20.633137"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:20.635002"], ["updated_at", "2015-08-26 08:15:20.635002"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attachments" ("user_id", "string_upload", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["string_upload", "file.png"], ["created_at", "2015-08-26 08:15:20.971854"], ["updated_at", "2015-08-26 08:15:20.971854"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAttachment Load (0.0ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction

@@ -7,7 +7,6 @@ describe 'Users' do
   it "creates a file from a base64 string" do
     visit new_user_path
 
-    fill_in 'user_name',          with: 'test'
     fill_in 'user_string_upload', with: base64_1
 
     click_button 'Create User'
@@ -17,8 +16,7 @@ describe 'Users' do
   end
 
   it "updates a file from a base64 string" do
-    user = User.create! name:          'test',
-                        string_upload: base64_1
+    user = User.create! string_upload: base64_1
 
     visit edit_user_path(user)
 
@@ -33,8 +31,7 @@ describe 'Users' do
 
   describe 'nested attachments' do
     it "creates a file from a base64 string" do
-      user = User.create! name:          'test',
-                          string_upload: base64_1
+      user = User.create! string_upload: base64_1
 
       visit edit_user_path(user)
 
@@ -48,9 +45,8 @@ describe 'Users' do
     end
 
     it "updates a file from a base64 string" do
-      user = User.create! name:          'test',
-                          string_upload: base64_1,
-                          attachments_attributes: [{string_upload: base64_1}]
+      pending "This doesn't work in the normal browser!"
+      user = User.create! attachments_attributes: [{string_upload: base64_1}]
 
       visit edit_user_path(user)
 
