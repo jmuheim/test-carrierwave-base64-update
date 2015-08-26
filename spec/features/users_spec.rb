@@ -63,34 +63,4 @@ describe 'Users' do
   def file_to_base64(path)
     "data:image/png;base64,#{Base64.strict_encode64(File.open(path).read)}"
   end
-  
-  # it 'grants permission to edit a boilerplate copy' do
-  #   visit edit_project_boilerplate_copy_path(@boilerplate_copy.project, @boilerplate_copy)
-  #
-  #   fill_in 'boilerplate_title',     with: 'A new boilerplate'
-  #   fill_in 'boilerplate_intro',     with: 'Some nice introduction'
-  #   fill_in 'boilerplate_outro',     with: 'A few words afterwards'
-  #   fill_in 'boilerplate_resources', with: 'Resources, resources, resources...'
-  #
-  #   select 'Success criterion test heading number Success criterion test name - A: Topic test title',
-  #                                    from: 'boilerplate_topic_id'
-  #
-  #   fill_in 'boilerplate_tags',            with: 'A tag, another tag'
-  #   fill_in 'boilerplate_how_to_evaluate', with: 'Instructions on how to test'
-  #   select  'Completed',                   from: 'boilerplate_status'
-  #   select  'Low',                         from: 'boilerplate_priority'
-  #
-  #   expect {
-  #     click_button 'Update Boilerplate'
-  #     @boilerplate_copy.reload
-  #   } .to  change { @boilerplate_copy.title }.to('A new boilerplate')
-  #     .and change { @boilerplate_copy.intro }.to('Some nice introduction')
-  #     .and change { @boilerplate_copy.outro }.to('A few words afterwards')
-  #     .and change { @boilerplate_copy.resources }.to('Resources, resources, resources...')
-  #     .and change { @boilerplate_copy.topic }.to(@topic)
-  #     .and change { @boilerplate_copy.tags }.to('A tag, another tag')
-  #     .and change { @boilerplate_copy.how_to_evaluate }.to('Instructions on how to test')
-  #     .and change { @boilerplate_copy.status }.to('completed')
-  #     .and change { @boilerplate_copy.priority }.to('low')
-  # end
 end
