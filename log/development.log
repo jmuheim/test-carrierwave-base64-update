@@ -5249,3 +5249,1211 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:07:09 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:24:02 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (9.9ms)
+  Rendered users/_attachment_fields.html.erb (8.2ms)
+  Rendered users/_attachment_fields.html.erb (7.8ms)
+  Rendered users/_form.html.erb (39.1ms)
+  Rendered users/edit.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 691ms (Views: 670.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:24:03 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.3ms)
+  Rendered users/_attachment_fields.html.erb (8.4ms)
+  Rendered users/_attachment_fields.html.erb (8.9ms)
+  Rendered users/_form.html.erb (43.6ms)
+  Rendered users/edit.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 102ms (Views: 99.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:24:04 +0200
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:30:04 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mn+eHhINj+5K+ABCw/DrJ47EGol5i/sUITiZq/oy6ULXVHcw+zZxgOhybb2XBDhn+Md2wG0bjxkXfM7Sw1lI1Q==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"josh2asdf", "string_upload"=>"file.png", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", "josh2asdf"], ["updated_at", "2015-08-26 08:30:32.308349"], ["id", 5]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 27845ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:30:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:30:32 +0200
+
+
+Started GET "/uploads/user/file_upload/1/IMG_1891.jpg" for ::1 at 2015-08-26 10:30:32 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/user/file_upload/1/IMG_1891.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (45.1ms)
+
+
+Started GET "/uploads/attachment/string_upload/5/file.png" for ::1 at 2015-08-26 10:30:32 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/attachment/string_upload/5/file.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (21.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.9ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:30:35 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.2ms)
+  Rendered users/_attachment_fields.html.erb (9.4ms)
+  Rendered users/_attachment_fields.html.erb (10.6ms)
+  Rendered users/_form.html.erb (44.7ms)
+  Rendered users/edit.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:30:40 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pEDizezzkG+j9JoIgHiG0ugyAtXiFLOsbmY/ThyguYTpawvjBchuAQF+9/fUjFWSnjFunPaEx6FYImg3JcsYEw==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"juhuuuu", "string_upload"=>"file.png", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?  [["name", "juhuuuu"], ["updated_at", "2015-08-26 08:30:55.557472"], ["id", 5]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 15301ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:30:55 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:30:55 +0200
+
+
+Started GET "/uploads/user/file_upload/1/IMG_1891.jpg" for ::1 at 2015-08-26 10:30:55 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/user/file_upload/1/IMG_1891.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (50.0ms)
+
+
+Started GET "/uploads/attachment/string_upload/5/file.png" for ::1 at 2015-08-26 10:30:55 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/attachment/string_upload/5/file.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.7ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:31:05 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (8.7ms)
+  Rendered users/_attachment_fields.html.erb (8.9ms)
+  Rendered users/_attachment_fields.html.erb (10.0ms)
+  Rendered users/_form.html.erb (40.9ms)
+  Rendered users/edit.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 100ms (Views: 79.0ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:31:07 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79UNzzvCn/xwM0J/sp9+2J2dMlaujYs8ag1ndpENdXii/uTh0vlhktK5L4Dma62Y655eH7od/zFcSTAPqGbU7w==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"juhuuuuwww", "string_upload"=>"file.png", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 5  [["user_id", 1]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", "juhuuuuwww"], ["updated_at", "2015-08-26 08:31:07.900283"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 34748ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:31:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:31:42 +0200
+
+
+Started GET "/uploads/user/file_upload/1/IMG_1891.jpg" for ::1 at 2015-08-26 10:31:42 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/user/file_upload/1/IMG_1891.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.4ms)
+
+
+Started GET "/uploads/attachment/string_upload/5/file.png" for ::1 at 2015-08-26 10:31:42 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/attachment/string_upload/5/file.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-08-26 10:31:50 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.1ms)
+  Rendered users/_attachment_fields.html.erb (10.8ms)
+  Rendered users/_attachment_fields.html.erb (8.1ms)
+  Rendered users/_form.html.erb (41.3ms)
+  Rendered users/edit.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-08-26 10:31:54 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0lnMSGXntjMyKq3zeOhuWeQEIpWkU4IPGSii5dWtM5OfciVmjNxIXZCgwAwsHL0ZkgdO3LDD9gIvbPWc7MaSBA==", "user"=>{"name"=>"Josh", "string_upload"=>"file.png", "attachments_attributes"=>{"0"=>{"name"=>"juhuuuuwww2", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAD40lEQVRIS8WWe0zVZRjHPy+cm4dLHZAdEAYYggOt5rByhpuYFyQ3L+GAMHKay5EVi+lqTGAoLKhkkGhDcuIysCARcCDesGwzrJlzrUlIDmnnZFPPOdzOjfO2wxCzwH+49Pzz237b+3z2vM/v99lXWOvrJCPlAfQqVWiWLkOr1T54PelPYSN8FCpwYY17Co+WJry8vCYd9qChMKSkjkJxOiFqDk/uzkGj0Uwd1GixjEKlBLVCgU47Y8qA7sZCSjdqeuv/gZpMJunr64sQYtrGFZ2dnVKhUBASEoKnp+e0gEV3d7e0WCwEBATg7+8/aWDpcmGz21GpNXj86xKF0WiUVqsVPz8/+vr60Ov1eHi4NTGxMnX8QEZmMVmVVcTO8n6kmbg7OCh7enq41dWFa2CAyMhIYmJiJrzjvpuX2Zj8Prm1jSwK93kUOlhQLB02G9bgIEzxS7APuZgdGjquBq+fbeJYUysW+xA+M4PYtGUbT4frASenq49y6lI7Qq1jfthMao43U/R1I3PFbWobzqPTOWm+eA1xgyAZkhiHdskimKXnr4QVaL298RrDvcZfzpOwYTtLktJZGBVMwxcVsCCJuuIs2o7sY3vRYV55fQvhPnbqvzzObbuOqoYWwv78lpWr0lG9lMjGxFiE8fnlUr/wWVAocPxhoDc3C3XUXLzU6v8s9c6NK7R+38PalDVIp5mKvTu5NDCHb0reIWPdMhSL32Z/dvrwuavNh0nfXcXRxjPD0OQ3Csirb+TFEG9ER/ACGRkXizTdp/+1JByJCajUqjEnddw1cKS8nO86uzD33uO+sZvAxVs5tieN9NUJLH+3mq0booehfb/9SOqmXeTWtxBuaGNH9gE+OXmCYJVAyPXp0mazYX51Hbq0FPpNJlQq1Zg7rSvLpqj2GmWflRIbHcHFQ7uo/FVHTfEONq+NZ9b6PAq3rRmG3mqvJ+mtEioazhBqaCPjg3I+PllPqEYg7rycJG1pSQSmJuMpJWazeVxo1UfvUVr7O2Xle5Dmm+Rk52B54jnqakq4ejCfzOrL5BQVsNDfwcHCXVy4paWm+RwhxvO8ufNTSk41EeaGdp1ulWErV7jNP/ybmExuqHLMSU0dP5ObX8B1wz1mBASz9IV5nG08R8qOPDavnsehfR/y1YUrCDQ8Mz+afkcvmXv3E2hop7CshqzSUvRq9/VKKV0jn4xbHGaLBZVC8djkYLNaUWo0uBXidNgRnko8R7TjtNtxCQ9USsW4dhEDKckP44pjiP7ZoWjy8tFOZXJwEPGPjORiMH4ONJ6Y2rjy0+eVD5PDkAuvwCAiElahVConJt/HnP4bAYR4zg4ichUAAAAASUVORK5CYII=", "_destroy"=>"false", "id"=>"5"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 5  [["user_id", 1]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", "juhuuuuwww2"], ["updated_at", "2015-08-26 08:31:54.662440"], ["id", 5]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 57832ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-26 10:32:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-08-26 10:32:52 +0200
+
+
+Started GET "/uploads/user/file_upload/1/IMG_1891.jpg" for ::1 at 2015-08-26 10:32:52 +0200
+
+ActionController::RoutingError (No route matches [GET] "/uploads/user/file_upload/1/IMG_1891.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/josh/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (46.7ms)
+
+
+Started GET "/users" for ::1 at 2015-08-26 11:21:58 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-26 11:22:06 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (14.9ms)
+  Rendered users/_form.html.erb (27.3ms)
+  Rendered users/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-26 11:22:12 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zWHJJrfg9BSH5W+UB5nHl/eC/jCv3goK0Kz9KR3hnCWASiAIXtsKeiVvAmtTbRTXgYGSebtOfgfm6KpQJIo9sg==", "user"=>{"name"=>"Neu", "string_upload"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Neu"], ["created_at", "2015-08-26 09:22:12.388426"], ["updated_at", "2015-08-26 09:22:12.388426"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-26 11:22:12 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-08-26 11:22:17 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (10.0ms)
+  Rendered users/_attachment_fields.html.erb (11.3ms)
+  Rendered users/_form.html.erb (32.9ms)
+  Rendered users/edit.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-08-26 11:22:22 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ozalHh9BufTbrXdcfsgkV/5h0BzGIo1Wwx8uzseyAxDuHUww9npHmnknGqMqPPcXiGK8VdKy+Vv1W3m3/tmihw==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdf", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attachments" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdf"], ["user_id", 6], ["created_at", "2015-08-26 09:22:22.281754"], ["updated_at", "2015-08-26 09:22:22.281754"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 40229ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-26 11:23:02 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-08-26 11:23:05 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (8.2ms)
+  Rendered users/_attachment_fields.html.erb (8.3ms)
+  Rendered users/_attachment_fields.html.erb (10.7ms)
+  Rendered users/_form.html.erb (38.5ms)
+  Rendered users/edit.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-08-26 11:23:09 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IpEZk5vEZ1O4v50LziyKWePUHXff9HM6Cj0qi+yC2IhvuvC9cv+ZPRo18PSa2FkZlddxPstkBzc8eX3y1el5Hw==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 6  [["user_id", 6]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "attachments" SET "name" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["name", "asdfasdfasdf"], ["updated_at", "2015-08-26 09:23:09.272112"], ["id", 6]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT  "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  ORDER BY "attachments"."id" ASC LIMIT 1[0m  [["user_id", 6]]
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 15751ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-26 11:23:25 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-08-26 11:23:30 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (9.1ms)
+  Rendered users/_attachment_fields.html.erb (9.5ms)
+  Rendered users/_attachment_fields.html.erb (10.2ms)
+  Rendered users/_form.html.erb (41.5ms)
+  Rendered users/edit.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-08-26 11:24:03 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (8.8ms)
+  Rendered users/_attachment_fields.html.erb (9.4ms)
+  Rendered users/_form.html.erb (43.6ms)
+  Rendered users/edit.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 89ms (Views: 78.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-08-26 11:24:09 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+AWkIcszclBJsVjU+VJgd2wmYwq3qldhgutrqaPY/uC1Lk0PIgiMPus7NSutprM3GiUPQ6M6I2y0rzzQmrNfdw==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 6  [["user_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-26 11:24:09 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-08-26 11:24:11 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (8.6ms)
+  Rendered users/_attachment_fields.html.erb (8.2ms)
+  Rendered users/_form.html.erb (27.9ms)
+  Rendered users/edit.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-08-26 11:24:15 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OcNhrSFo82jxR5YfzH4zo8EbQipxUy5vhjD+n5/wzvd06IiDyFMNBlPN++CYiuDjtxguY2XDWmKwdKnmpptvYA==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1440581054028"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 6  [["user_id", 6]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "attachments" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["user_id", 6], ["created_at", "2015-08-26 09:24:15.347778"], ["updated_at", "2015-08-26 09:24:15.347778"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 13ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-26 11:24:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-08-26 11:24:17 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (8.4ms)
+  Rendered users/_attachment_fields.html.erb (9.3ms)
+  Rendered users/_attachment_fields.html.erb (15.4ms)
+  Rendered users/_form.html.erb (45.4ms)
+  Rendered users/edit.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-08-26 11:24:24 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uE+4C4qiOeSSQ+xdho4y7ac2JuCPMXB/G9b2ELRII/X1ZFElY5nHijDJgaLSeuGt0TVKqZuhBHItkqFpjSOCYg==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAADt0lEQVRIS82Vb0yVdRTHP89zH+5fwLiRhIiooNeGoyKrYYmYWixTXkRqtWLDrVXO5p1u1cpR5ipLjTe5hqutUljrTa8yXK2ZDUmRmqxscRVDUEjlyuVy7+Xe50/7/eBewlvLF648r57nOed3vuec53u+P6WiosLifzDlhgC2LDAtC5uqYJgWpjn+rKpK2kyET8QoiiJjlKtCxBgNw8KyLITLZlOnxKQ6FqAep0amO4M/glHyc93ckuPg7PkwwVAcm208s4gzTJM8r4uCPA+jEZ0z/SPohikLECaLVxRmz8zGm2VnNJrg9wthIjFDgouwFHAiYfLg4pmsXVFMxy8XKb8tF+80J+HRBG/sO0HP+RFUm4IK1K4spqayiHA0gdul0d07TGNzF8MjcUAhy6Phf7KMBUU3cSUcJ9OlMXA5ymtNHURiOm6HNgkcT5isWlLItg2LaGnt5sDBAFkeOztfuJcfugbYtf8kqqLw8P2FbKxdyM6Pf6Lj1EW82U4aninnt95hdn96Et20qH1gDnVrfGzZc5SBSxE8bo3Z+Vn8fCZIbMxAVf/ScRLY/3gZ9dsP0zsQlmN9se4OCqa72NrYLv/1+y8tYXAowgefn8JhVxHnli6awWPL51L/+rcMDsXYUONj3cpiNr3zvZxUXBdcAKfdluJKatQiwerKWdQ94uO5t44QDI1J8mxcW0ppcQ7+XW24HBofNVSRMCyCodg46SxS5Nvx4Y/09IcozMuUU5juddPTP0xXIMjXx/o4NzCa4koa8NOrfDz/djrw5gngT7Yv44vDZ2k5GJAdJEVAECoeNyWxRMGCqGXzb+b2eV6q7ipANwy2vNfO4FB0fAuSe5zs+J+A/buPyvVq3LpYHt629zgZmlgRBcMwZdfiXZgA1nVTFpXQTUrn5ND0aiUNTSc40nkBe4Y6FXjNUjHqBTz75nepUW9at5DSkhw2v9tGdMygsjyfl+vvpPnLbr453oeqqNJ/q9fNZ4dOMxY3qL6vEM2m0PnrZeIJneqKWayvLsG/p41Ab0j6JtdJN1lxTwGPLp/LK3uPydUQHT612sf8omx2NHWiTwjCsrtn8ET1PNwOG4qqyK5a287R0npaPtdUFbH+oRK5ryKHONf8VYBD7X2pXZ8imWJdBNVFYNLECAUjhQolTSR3OmzkTnPJ+KFQTIpDUkDENjjtqtQBcf7SlZgUGk2blLc0rRbprxbIv/02Ia+iGFFwmmT+i//GuCT+y9vxundsmuY11X9dgcUVGI1Grwn4T5Bt0wg8wYurAAAAAElFTkSuQmCC", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35m (0.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 397ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-26 11:24:24 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-08 11:43:17 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 26ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-09-08 11:43:21 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 450ms (Views: 439.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-08 11:43:22 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-08 11:43:22 +0200
+
+
+Started GET "/users/new" for ::1 at 2015-09-08 11:43:27 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (9.0ms)
+  Rendered users/_form.html.erb (75.8ms)
+  Rendered users/new.html.erb within layouts/application (79.2ms)
+Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:43:33 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (9.0ms)
+  Rendered users/_attachment_fields.html.erb (9.9ms)
+  Rendered users/_attachment_fields.html.erb (9.0ms)
+  Rendered users/_form.html.erb (42.2ms)
+  Rendered users/edit.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 109ms (Views: 99.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:43:53 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7x8kdmctRo70IiJKdSPpucHf0YlvuHDDq54xJH64RFiiNM1Yjha44FaoT7Uh1zr5t9y9wHsoBM6d2mZdR9Plzw==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000105538030 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150908-22301-1jnyh3k.jpg>, @original_filename="beer.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachments_attributes][0][file_upload]\"; filename=\"beer.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.9ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "attachments" SET "file_upload" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["file_upload", "beer.jpg"], ["updated_at", "2015-09-08 09:43:54.061513"], ["id", 6]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 353ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:43:54 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:43:57 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (9.5ms)
+  Rendered users/_attachment_fields.html.erb (10.1ms)
+  Rendered users/_attachment_fields.html.erb (9.2ms)
+  Rendered users/_form.html.erb (44.7ms)
+  Rendered users/edit.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:44:07 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CRYJW0w+W0EI74Pg4bWQovlT/YOLNTDu/oa4vFfhVtpEPeB1pQWlL6pl7h+1QUPij1CRyp+lROPIwu/Fbor3TQ==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x000001047b8018 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150908-22301-120a5tt.jpg>, @original_filename="IMG_1891.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachments_attributes][0][file_upload]\"; filename=\"IMG_1891.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attachments" SET "file_upload" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["file_upload", "IMG_1891.jpg"], ["updated_at", "2015-09-08 09:44:07.910524"], ["id", 6]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 593ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:44:07 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:44:36 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (10.2ms)
+  Rendered users/_attachment_fields.html.erb (10.1ms)
+  Rendered users/_attachment_fields.html.erb (9.8ms)
+  Rendered users/_form.html.erb (46.1ms)
+  Rendered users/edit.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:45:10 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (17.0ms)
+  Rendered users/_attachment_fields.html.erb (13.6ms)
+  Rendered users/_attachment_fields.html.erb (18.2ms)
+  Rendered users/_form.html.erb (84.4ms)
+  Rendered users/edit.html.erb within layouts/application (86.4ms)
+Completed 200 OK in 163ms (Views: 140.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-09-08 11:45:11 +0200
+
+
+Started GET "/users" for ::1 at 2015-09-08 11:45:15 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-09-08 11:45:17 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-09-08 11:45:17 +0200
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:45:19 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (10.7ms)
+  Rendered users/_attachment_fields.html.erb (9.2ms)
+  Rendered users/_attachment_fields.html.erb (8.5ms)
+  Rendered users/_form.html.erb (40.6ms)
+  Rendered users/edit.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:45:25 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VG+qMXRAIrb2v/HImm7eKeBthkWnj5TyUHSgP53q5bAZREMfnXvc2FQ1nDfOmg1plm7qDLMf4P9mMPdGpIFEJw==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000105b825a8 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150908-22301-1wo8nhp.jpg>, @original_filename="garten.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachments_attributes][0][file_upload]\"; filename=\"garten.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.6ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "attachments" SET "file_upload" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["file_upload", "garten.jpg"], ["updated_at", "2015-09-08 09:45:26.070444"], ["id", 6]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 455ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:45:26 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:45:30 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (9.6ms)
+  Rendered users/_attachment_fields.html.erb (11.2ms)
+  Rendered users/_attachment_fields.html.erb (10.7ms)
+  Rendered users/_form.html.erb (44.7ms)
+  Rendered users/edit.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:45:38 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QOCHC1l2tEbY235cPgqljShLv3E312bnSk1p9DHVWT4Ny24lsE1KKHpRE6Nq/nbNXkjTOCNHEup8CT6NCL74qQ==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:45:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:45:40 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (13.5ms)
+  Rendered users/_attachment_fields.html.erb (9.1ms)
+  Rendered users/_attachment_fields.html.erb (10.7ms)
+  Rendered users/_form.html.erb (46.9ms)
+  Rendered users/edit.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:45:45 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7HeOmKawLmvXZP38FGCvCFIn+kWFleVHHn3nDSjS3GShXGe2T4vQBXXukANAlHxIJCSWDJEFkUooObB0Ebl98w==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000104401be0 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150908-22301-mi1p9q.jpg>, @original_filename="beer.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachments_attributes][1][file_upload]\"; filename=\"beer.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT  "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attachments" SET "file_upload" = ?, "updated_at" = ? WHERE "attachments"."id" = ?[0m  [["file_upload", "beer.jpg"], ["updated_at", "2015-09-08 09:45:46.191132"], ["id", 7]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 262ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:45:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:45:48 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (10.9ms)
+  Rendered users/_attachment_fields.html.erb (10.1ms)
+  Rendered users/_attachment_fields.html.erb (9.9ms)
+  Rendered users/_form.html.erb (44.4ms)
+  Rendered users/edit.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:46:00 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zDhKZbGj4PQMKxanUiyEtKBnb/7F2ZlYXXRDbUiYE4iBE6NLWJgemq6he1gG2Ff01mQDt9FJ7VVrMBQUcfOyHw==", "user"=>{"name"=>"Neu", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000102c13e20 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150908-22301-255poo.jpg>, @original_filename="beer.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[file_upload]\"; filename=\"beer.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "file_upload" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["file_upload", "beer.jpg"], ["updated_at", "2015-09-08 09:46:01.241436"], ["id", 6]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 287ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:46:01 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:46:03 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (11.6ms)
+  Rendered users/_attachment_fields.html.erb (9.6ms)
+  Rendered users/_attachment_fields.html.erb (9.2ms)
+  Rendered users/_form.html.erb (46.2ms)
+  Rendered users/edit.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:46:07 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F/3J04sJi97anxZ7mdpnm9RYGM5ypY9g4kFosEi9CQVa1iD9YjJ1sHgVe4TNLrTbolt0h2Y1+23UBT/Jcdaokg==", "user"=>{"name"=>"Neu", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000106a09b08 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150908-22301-6a51xs.jpg>, @original_filename="IMG_1891.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[file_upload]\"; filename=\"IMG_1891.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "file_upload" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["file_upload", "IMG_1891.jpg"], ["updated_at", "2015-09-08 09:46:08.480917"], ["id", 6]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 579ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:46:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6/edit" for ::1 at 2015-09-08 11:46:27 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/_attachment_fields.html.erb (11.1ms)
+  Rendered users/_attachment_fields.html.erb (9.4ms)
+  Rendered users/_attachment_fields.html.erb (12.9ms)
+  Rendered users/_form.html.erb (58.1ms)
+  Rendered users/edit.html.erb within layouts/application (59.3ms)
+Completed 200 OK in 107ms (Views: 95.9ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/users/6" for ::1 at 2015-09-08 11:46:33 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+x+tSX0zFpbhU9UVkgJA/PznJiXp9u/GCHzGuQ7bslS2NERnlAjo+EPZuOrG9pO8iuRKbP1mm8s+OJHAN7ATww==", "user"=>{"name"=>"Neu", "string_upload"=>"", "attachments_attributes"=>{"0"=>{"name"=>"asdfasdfasdf", "file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00000105928b68 @tempfile=#<Tempfile:/var/folders/kv/_17p5d554kd293fgsq6f153w0000gn/T/RackMultipart20150908-22301-1a7iwa.jpg>, @original_filename="lufthansa.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachments_attributes][0][file_upload]\"; filename=\"lufthansa.jpg\"\r\nContent-Type: image/jpeg\r\n">, "string_upload"=>"", "_destroy"=>"false", "id"=>"6"}, "1"=>{"name"=>"", "string_upload"=>"", "_destroy"=>"false", "id"=>"7"}}}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAttachment Load (0.8ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" IN (6, 7)[0m  [["user_id", 6]]
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 284ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/6" for ::1 at 2015-09-08 11:46:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.2ms)
