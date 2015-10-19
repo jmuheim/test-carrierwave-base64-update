@@ -7,8 +7,15 @@
     <legend>User</legend>
     <div class="form-inputs">
       <%= f.input :name %>
+
       <%= f.input :file_upload %>
+      <%= f.hidden_field :file_upload_cache %>
+      <%= f.check_box :remove_file_upload %>
+
       <%= f.input :string_upload, as: :text %>
+      <%= f.hidden_field :string_upload_cache %>
+      <%= f.check_box :remove_string_upload %>
+
     </div>
   </fieldset>
 
