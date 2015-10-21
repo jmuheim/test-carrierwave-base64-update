@@ -69,6 +69,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :file_upload, :file_upload_cache, :remove_file_upload, :string_upload, :string_upload_cache, :remove_string_upload, attachments_attributes: [:id, :name, :file_upload, :file_upload_cache, :remove_file_upload, :string_upload, :string_upload_cache, :remove_string_upload, :_destroy])
+      params.require(:user).permit(:name, :lock_version, :file_upload, :file_upload_cache, :remove_file_upload, :string_upload, :string_upload_cache, :remove_string_upload, attachments_attributes: [:id, :name, :file_upload, :file_upload_cache, :remove_file_upload, :string_upload, :string_upload_cache, :remove_string_upload, :_destroy])
     end
 end

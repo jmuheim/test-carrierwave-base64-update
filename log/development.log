@@ -12766,3 +12766,1395 @@ Processing by UsersController#show as HTML
   [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
   Rendered users/show.html.erb within layouts/application (4.0ms)
 Completed 200 OK in 159ms (Views: 157.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLockVersionFields (20151019154053)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "lock_version" varchar DEFAULT '0'[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "attachments" ADD "lock_version" varchar DEFAULT '0'
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151019154053"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/users/10" for ::1 at 2015-10-19 17:41:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 226ms (Views: 189.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:42:00 +0200
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:42:01 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (7.7ms)
+  Rendered users/_attachment_fields.html.erb (6.0ms)
+  Rendered users/_form.html.erb (83.7ms)
+  Rendered users/edit.html.erb within layouts/application (87.5ms)
+Completed 200 OK in 120ms (Views: 119.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:42:10 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (6.9ms)
+  Rendered users/_attachment_fields.html.erb (6.2ms)
+  Rendered users/_form.html.erb (24.8ms)
+  Rendered users/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:42:10 +0200
+
+
+Started PATCH "/users/10" for ::1 at 2015-10-19 17:42:20 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B+EoDXpUfZ7QMiiE099GEl+kXhWm2OBsglw4WRRR2qBKysEjk2+D8HK4RXuHK5VSKacyXLJIlGG0GG8gLTp7Nw==", "user"=>{"name"=>"2haha2", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0", "attachments_attributes"=>{"0"=>{"name"=>"test22", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "_destroy"=>"false", "id"=>"13"}}}, "commit"=>"Update User", "id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Unpermitted parameter: lock_version
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 13  [["user_id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "name" = '2haha2', "string_upload" = 'file.png', "updated_at" = '2015-10-19 15:42:20.961098', "lock_version" = '1' WHERE ("users"."id" = 10 AND "users"."lock_version" = '''0''')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 14ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x00000101bd1a58 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000101bd1710 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000101bda680 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:42:31 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (6.6ms)
+  Rendered users/_attachment_fields.html.erb (6.3ms)
+  Rendered users/_form.html.erb (23.3ms)
+  Rendered users/edit.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:42:32 +0200
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:42:32 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (7.2ms)
+  Rendered users/_attachment_fields.html.erb (6.4ms)
+  Rendered users/_form.html.erb (26.4ms)
+  Rendered users/edit.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:42:33 +0200
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:42:35 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.5ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (10.8ms)
+  Rendered users/_attachment_fields.html.erb (10.7ms)
+  Rendered users/_form.html.erb (34.3ms)
+  Rendered users/edit.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 69ms (Views: 66.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:42:35 +0200
+
+
+Started PATCH "/users/10" for ::1 at 2015-10-19 17:42:37 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cWVd5/R5DKjz6zP4sZSn4C4HlrgvbO71gKUQDINRhTI8TrTJHULyxlFhXgflYHSgWAT68Tv8mvi24Ud1ujokpQ==", "user"=>{"name"=>"2haha", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0", "attachments_attributes"=>{"0"=>{"name"=>"test22", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "_destroy"=>"false", "id"=>"13"}}}, "commit"=>"Update User", "id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Unpermitted parameter: lock_version
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 13  [["user_id", 10]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "string_upload" = 'file.png', "updated_at" = '2015-10-19 15:42:37.702916', "lock_version" = '1' WHERE ("users"."id" = 10 AND "users"."lock_version" = '''0''')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 13ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x00000101bd1a58 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000101bd1710 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000101bda680 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started PATCH "/users/10" for ::1 at 2015-10-19 17:43:05 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cWVd5/R5DKjz6zP4sZSn4C4HlrgvbO71gKUQDINRhTI8TrTJHULyxlFhXgflYHSgWAT68Tv8mvi24Ud1ujokpQ==", "user"=>{"name"=>"2haha", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0", "attachments_attributes"=>{"0"=>{"name"=>"test22", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "_destroy"=>"false", "id"=>"13"}}}, "commit"=>"Update User", "id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 13  [["user_id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "lock_version" = '1', "string_upload" = 'file.png', "updated_at" = '2015-10-19 15:43:05.756937' WHERE ("users"."id" = 10 AND "users"."lock_version" = '''0''')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 33ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.6ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x00000101bd1a58 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000101bd1710 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000101bda680 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:43:20 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (7.0ms)
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_form.html.erb (25.7ms)
+  Rendered users/edit.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:43:21 +0200
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:43:22 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (7.2ms)
+  Rendered users/_attachment_fields.html.erb (6.0ms)
+  Rendered users/_form.html.erb (26.8ms)
+  Rendered users/edit.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:43:22 +0200
+
+
+Started PATCH "/users/10" for ::1 at 2015-10-19 17:43:27 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bl0osw2HMLDDUwU/z/fZrnqbxVnnmTzLAwuvpz3mBO4jdsGd5LzO3mHZaMCbAwruDJipEPMJSMY1T/jeBI2leQ==", "user"=>{"name"=>"2haha", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"3", "attachments_attributes"=>{"0"=>{"name"=>"test22", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"file.png", "string_upload_cache"=>"", "remove_string_upload"=>"0", "_destroy"=>"false", "id"=>"13"}}}, "commit"=>"Update User", "id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 13  [["user_id", 10]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "lock_version" = '4', "string_upload" = 'file.png', "updated_at" = '2015-10-19 15:43:27.144653' WHERE ("users"."id" = 10 AND "users"."lock_version" = '''3''')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 13ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x00000101bd1a58 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000101bd1710 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000101bda680 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:43:33 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (7.9ms)
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_form.html.erb (23.2ms)
+  Rendered users/edit.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:43:33 +0200
+
+
+Started GET "/users/10/edit" for ::1 at 2015-10-19 17:43:34 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/_attachment_fields.html.erb (23.5ms)
+  Rendered users/_attachment_fields.html.erb (7.4ms)
+  Rendered users/_form.html.erb (47.4ms)
+  Rendered users/edit.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 85ms (Views: 83.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:43:34 +0200
+
+
+Started GET "/users" for ::1 at 2015-10-19 17:43:36 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2015-10-19 17:43:37 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (8.3ms)
+  Rendered users/_form.html.erb (21.8ms)
+  Rendered users/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-10-19 17:43:40 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgZ5zc8tTlHOz5oKjsJr2UrPPFoDQnTUIchiCMNm9OV/LZDjJhawP2xF9/XaNriZPMxQExfSANkXjDVx+g1Vcg==", "user"=>{"name"=>"lockversion", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "lock_version", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "lockversion"], ["lock_version", "0"], ["created_at", "2015-10-19 15:43:40.993024"], ["updated_at", "2015-10-19 15:43:40.993024"]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 13ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/users/11" for ::1 at 2015-10-19 17:43:41 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:43:41 +0200
+
+
+Started GET "/users/11/edit" for ::1 at 2015-10-19 17:43:42 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 11]]
+  Rendered users/_attachment_fields.html.erb (6.1ms)
+  Rendered users/_form.html.erb (15.5ms)
+  Rendered users/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/11" for ::1 at 2015-10-19 17:43:44 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rkB+deSDO3DA1GoOYKHMeHT2FGgYbglo8vC1z17DhUvja5dbDbjFHmJeB/E0VR84AvV4IQz+fWXEtOK2Z6gk3A==", "user"=>{"name"=>"lockversion", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Update User", "id"=>"11"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "lock_version" = '1', "updated_at" = '2015-10-19 15:43:44.402486' WHERE ("users"."id" = 11 AND "users"."lock_version" = '''0''')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 9ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x00000101bd1a58 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000101bd1710 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000101bda680 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/11/edit" for ::1 at 2015-10-19 17:43:45 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 11]]
+  Rendered users/_attachment_fields.html.erb (6.2ms)
+  Rendered users/_form.html.erb (16.0ms)
+  Rendered users/edit.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:43:46 +0200
+
+
+Started GET "/users/11/edit" for ::1 at 2015-10-19 17:44:20 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 11]]
+  Rendered users/_attachment_fields.html.erb (8.7ms)
+  Rendered users/_form.html.erb (18.9ms)
+  Rendered users/edit.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:44:20 +0200
+
+
+Started PATCH "/users/11" for ::1 at 2015-10-19 17:44:23 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MMWAu1LbIjXP7kGi1N+uabPiI6TtZsxvNm9Y9J3ltQV97mmVu+DcW21kLF2AK30pxeFP7fn2uGIAKw+NpI4Ukg==", "user"=>{"name"=>"lockversion", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Update User", "id"=>"11"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "lock_version" = '1', "updated_at" = '2015-10-19 15:44:23.919470' WHERE ("users"."id" = 11 AND "users"."lock_version" = '''0''')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 10ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.2ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x00000101bd1a58 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000101bd1710 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000101bda680 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150821121343)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "file_upload" varchar, "string_upload" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150821121343"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to CreateAttachments (20150821122005)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "file_upload" varchar, "string_upload" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150821122005"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to AddNameToAttachment (20150826074932)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" ADD "name" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150826074932"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to AddLockVersionFields (20151019154053)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "lock_version" varchar DEFAULT '0'
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "attachments" ADD "lock_version" varchar DEFAULT '0'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151019154053"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/11/edit" for ::1 at 2015-10-19 17:47:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 404 Not Found in 34ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=11):
+  app/controllers/users_controller.rb:67:in `set_user'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (41.0ms)
+
+
+Started GET "/users/" for ::1 at 2015-10-19 17:47:32 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 181ms (Views: 180.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:47:33 +0200
+
+
+Started GET "/users/new" for ::1 at 2015-10-19 17:47:34 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (8.0ms)
+  Rendered users/_form.html.erb (93.1ms)
+  Rendered users/new.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 125ms (Views: 120.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2015-10-19 17:47:37 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tqOdWC1ONEWsehv+ncMFrb/ot1PgmGOTGMDMY9njgYj7iHR2xHXKKw7wdgHJN9btyevbGvQIF54uhJsa4IggHw==", "user"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("name", "lock_version", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdf"], ["lock_version", "0"], ["created_at", "2015-10-19 15:47:37.156373"], ["updated_at", "2015-10-19 15:47:37.156373"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-19 17:47:37 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:47:37 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:47:38 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (6.7ms)
+  Rendered users/_form.html.erb (16.4ms)
+  Rendered users/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:47:40 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4HYJP7Cx4ihV3M1+BLYVVejuDxNDx71RtM25UDGG+jKtXeARWYocRvdWoIFQQsYVnu1jWldXyVyCie4pCO1bpQ==", "user"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "lock_version" = '1', "updated_at" = '2015-10-19 15:47:40.178352' WHERE ("users"."id" = 1 AND "users"."lock_version" = '''0''')[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 409 Conflict in 11ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x00000103359ab8 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000103359770 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x000001033626b8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150821121343)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "file_upload" varchar, "string_upload" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150821121343"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to CreateAttachments (20150821122005)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "file_upload" varchar, "string_upload" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150821122005"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddNameToAttachment (20150826074932)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" ADD "name" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150826074932"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to AddLockVersionFields (20151019154053)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "lock_version" integer DEFAULT 0
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "attachments" ADD "lock_version" integer DEFAULT 0[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151019154053"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:47:58 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 32ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/users_controller.rb:67:in `set_user'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:47:59 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/users_controller.rb:67:in `set_user'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-10-19 17:48:00 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (7.9ms)
+  Rendered users/_form.html.erb (72.8ms)
+  Rendered users/new.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 256ms (Views: 252.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/users/new" for ::1 at 2015-10-19 17:48:01 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (9.8ms)
+  Rendered users/_form.html.erb (19.5ms)
+  Rendered users/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:01 +0200
+
+
+Started GET "/users" for ::1 at 2015-10-19 17:48:05 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:05 +0200
+
+
+Started GET "/users/new" for ::1 at 2015-10-19 17:48:06 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_attachment_fields.html.erb (8.3ms)
+  Rendered users/_form.html.erb (18.5ms)
+  Rendered users/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-10-19 17:48:08 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qJeEOesvzSWMmbMseWCxiShAmYGSWQuWLzp27z6WG/vlvG0XAhQzSy4T3tMtlGLJXkP1yIbJf5sZfiGWB/26bA==", "user"=>{"name"=>"", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/_attachment_fields.html.erb (9.4ms)
+  Rendered users/_form.html.erb (21.2ms)
+  Rendered users/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 77ms (Views: 68.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:08 +0200
+
+
+Started POST "/users" for ::1 at 2015-10-19 17:48:10 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRCCqB54/nSgYiH6xzhrMLtKL+kT/uRNTzfqtpL5bncsO2uG90MAGgLoTAWTzLhwzUlDoAdukEB5c73Pq5LP4A==", "user"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "lock_version", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "asdf"], ["lock_version", 0], ["created_at", "2015-10-19 15:48:10.511991"], ["updated_at", "2015-10-19 15:48:10.511991"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-19 17:48:10 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:10 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:48:11 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (9.4ms)
+  Rendered users/_form.html.erb (24.5ms)
+  Rendered users/edit.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:48:13 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"we/JbLKSVmmJZnEY46MdWp02aPQI3bj/gxL0ZfIQ7/GMxCBCW6moByvsHOe3V84a6zUEvRxNzPK1VqMcy3tOZg==", "user"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "lock_version" = 1, "updated_at" = '2015-10-19 15:48:13.125676' WHERE ("users"."id" = 1 AND "users"."lock_version" = 0)
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-19 17:48:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:13 +0200
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:48:14 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (7.5ms)
+  Rendered users/_form.html.erb (17.2ms)
+  Rendered users/edit.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:48:22 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DKeEsstAFqhBfblqb9POeCYTdYfbMyqZIoGwFD7vrXFBjG2cInvoxuP31JU7Jx04UBAZzs+jXpQUxedtB4QM5g==", "user"=>{"name"=>"asdf2", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "name" = 'asdf2', "updated_at" = '2015-10-19 15:48:22.471938', "lock_version" = 2 WHERE ("users"."id" = 1 AND "users"."lock_version" = 1)
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-19 17:48:22 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:22 +0200
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:48:24 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7q9EgfPQW0JnLPAbGOBZ6ebO580H5MFR9mgRM/sM+5SkVQ87vS/A6sW3j84l1In0ZhX1iCP5whxnfc99oeSeQ==", "user"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "name" = 'asdf', "lock_version" = 2, "updated_at" = '2015-10-19 15:48:24.857867' WHERE ("users"."id" = 1 AND "users"."lock_version" = 1)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 15ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.2ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x000001033e1940 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x000001033e15f8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x000001033ea518 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:48:55 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7q9EgfPQW0JnLPAbGOBZ6ebO580H5MFR9mgRM/sM+5SkVQ87vS/A6sW3j84l1In0ZhX1iCP5whxnfc99oeSeQ==", "user"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"1", "attachments_attributes"=>{"1445269732081"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: lock_version
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "name" = 'asdf', "lock_version" = 2, "updated_at" = '2015-10-19 15:48:55.179787' WHERE ("users"."id" = 1 AND "users"."lock_version" = 1)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 409 Conflict in 9ms
+
+ActiveRecord::StaleObjectError (Attempted to update a stale object: User):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x000001033e1940 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x000001033e15f8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x000001033ea518 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:48:58 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (10.1ms)
+  Rendered users/_form.html.erb (19.5ms)
+  Rendered users/edit.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-ecf310bbff8775d1d930b66b858df8466a48552dca43e40cc1b2bb262ed18261.css?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/cocoon.self-05633fd25797688a657c08b26b8d4217031ee589f5ca76f0a57c11ac7d0e76ec.js?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-10-19 17:48:58 +0200
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:49:04 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p291kESeREnT41k5ArBsGm4UzlaoHKPqOAE6ZG0Ad67qRJy+raW6J3FpNMZWRL9aGBeiH7yM1+cORW0dVGvWOQ==", "user"=>{"name"=>"asdf2", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"2", "attachments_attributes"=>{"1445269742246"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0", "_destroy"=>"false"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: lock_version
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "attachments" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "asdf"], ["user_id", 1], ["created_at", "2015-10-19 15:49:04.875183"], ["updated_at", "2015-10-19 15:49:04.875183"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-19 17:49:04 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:49:06 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (8.0ms)
+  Rendered users/_attachment_fields.html.erb (7.4ms)
+  Rendered users/_form.html.erb (26.1ms)
+  Rendered users/edit.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:49:08 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yx6sOWQCH5u4PpwDZDWPoY7gckHluUmm9JuJncxr13GGNUUXjTnh9Rq08fwwwVzh+OMeCPEpPavC397k9QB25g==", "user"=>{"name"=>"asdf2", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"2", "attachments_attributes"=>{"0"=>{"name"=>"asdf", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0", "_destroy"=>"false", "id"=>"1"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: lock_version
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-19 17:49:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:49:09 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (9.6ms)
+  Rendered users/_attachment_fields.html.erb (12.8ms)
+  Rendered users/_form.html.erb (36.5ms)
+  Rendered users/edit.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2015-10-19 17:50:19 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+gbIchZSiWoi5LzDaC6fOK4mPf1QQmerad5HkCExWuWw/IPIWK0SwoB/wxZVGk8lLv0vuHRfZOb4y5nee9k/A==", "user"=>{"name"=>"asdf2", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"2", "attachments_attributes"=>{"0"=>{"name"=>"asdf2", "file_upload_cache"=>"", "remove_file_upload"=>"0", "string_upload"=>"", "string_upload_cache"=>"", "remove_string_upload"=>"0", "lock_version"=>"0", "_destroy"=>"false", "id"=>"1"}}}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: lock_version
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAttachment Load (1.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ? AND "attachments"."id" = 1  [["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mUPDATE "attachments" SET "name" = 'asdf2', "updated_at" = '2015-10-19 15:50:19.838608', "lock_version" = 1 WHERE ("attachments"."id" = 1 AND "attachments"."lock_version" = 0)[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-19 17:50:19 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-10-19 17:50:21 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."user_id" = ?  [["user_id", 1]]
+  Rendered users/_attachment_fields.html.erb (8.8ms)
+  Rendered users/_attachment_fields.html.erb (8.1ms)
+  Rendered users/_form.html.erb (28.9ms)
+  Rendered users/edit.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 76ms (Views: 75.2ms | ActiveRecord: 0.2ms)
